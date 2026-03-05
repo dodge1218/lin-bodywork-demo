@@ -42,8 +42,8 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <section className="section">
-        <div className="rounded-3xl border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 md:p-14">
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">
+        <div className="rounded-[2rem] border border-amber-100 bg-gradient-to-br from-white via-rose-50/30 to-amber-50 p-8 md:p-14">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-rose-100 px-3 py-1 text-sm font-medium text-rose-700">
             <Sparkles className="size-4" /> Professional Wellness Services
           </p>
           <h1 className="max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">Relax, Refresh, Revitalize</h1>
@@ -71,7 +71,7 @@ export default function Home() {
             <h2 className="text-2xl font-semibold">What changes after treatment</h2>
             <ul className="mt-4 space-y-3 text-slate-600">
               {outcomes.map((item) => (
-                <li key={item} className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 size-4 text-emerald-600" />{item}</li>
+                <li key={item} className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 size-4 text-rose-600" />{item}</li>
               ))}
             </ul>
           </Card>
@@ -86,7 +86,7 @@ export default function Home() {
             <Card key={service.name} className="p-6">
               <h3 className="text-xl font-semibold">{service.name}</h3>
               <p className="mt-2 text-slate-600">Duration: {service.duration}</p>
-              <p className="mt-1 text-lg font-semibold text-sky-700">Price: {service.price}</p>
+              <p className="mt-1 text-lg font-semibold text-rose-700">Price: {service.price}</p>
             </Card>
           ))}
         </div>
@@ -116,7 +116,7 @@ export default function Home() {
               <h2 className="text-3xl font-semibold">Book your next reset</h2>
               <p className="mt-3 text-slate-600">Call or text for fastest booking. Walk-ins based on availability.</p>
               <div className="mt-6 space-y-2 text-slate-700">
-                <p className="flex items-center gap-2"><ShieldCheck className="size-4 text-emerald-600" /> Licensed professional care</p>
+                <p className="flex items-center gap-2"><ShieldCheck className="size-4 text-rose-600" /> Licensed professional care</p>
                 <p>{SITE.phone}</p>
                 <p>{SITE.location}</p>
               </div>
@@ -124,7 +124,7 @@ export default function Home() {
                 <a href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}><Button>Call to Book</Button></a>
               </div>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm text-slate-700">
+            <div className="rounded-2xl border border-rose-100 bg-rose-50/60 p-5 text-sm text-slate-700">
               <p className="font-semibold text-slate-900">Why this demo page is higher-converting</p>
               <ul className="mt-3 space-y-2">
                 <li>• Clear value proposition above the fold</li>
