@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { CheckCircle2, Clock3, MapPin, Phone, ShieldCheck, Sparkles, Star } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -101,28 +102,35 @@ export default function Home() {
             </div>
           </div>
 
-          <Card className="border-emerald-100 bg-[#f7fdf9] p-6">
-            <p className="text-sm font-semibold text-emerald-800">Today&apos;s quick booking path</p>
-            <ol className="mt-4 space-y-3 text-sm text-slate-700">
-              <li className="flex gap-2">
-                <Phone className="mt-0.5 size-4 text-emerald-700" />
-                Call {SITE.phone}
-              </li>
-              <li className="flex gap-2">
-                <Clock3 className="mt-0.5 size-4 text-emerald-700" />
-                Pick 30, 60, or 90 minutes
-              </li>
-              <li className="flex gap-2">
-                <MapPin className="mt-0.5 size-4 text-emerald-700" />
-                Visit {SITE.location}
-              </li>
-            </ol>
-            <div className="mt-5 rounded-xl border border-emerald-200 bg-white p-4 text-sm text-slate-700">
-              <p className="font-semibold text-slate-900">Hours</p>
-              <p className="mt-1">Mon–Sat: 10:00 AM – 10:00 PM</p>
-              <p>Sunday: By appointment</p>
-            </div>
-          </Card>
+          <div className="relative overflow-hidden rounded-3xl border border-emerald-100 bg-slate-900">
+            <Image
+              src="/media/hero-spa.jpg"
+              alt="Relaxing spa treatment room with client receiving massage"
+              width={1600}
+              height={2070}
+              priority
+              className="h-full max-h-[560px] w-full object-cover"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-transparent" />
+
+            <Card className="absolute inset-x-4 bottom-4 border-white/30 bg-white/90 p-4 backdrop-blur md:inset-x-6 md:bottom-6 md:p-5">
+              <p className="text-sm font-semibold text-emerald-800">Today&apos;s quick booking path</p>
+              <ol className="mt-3 space-y-2 text-sm text-slate-700">
+                <li className="flex gap-2">
+                  <Phone className="mt-0.5 size-4 text-emerald-700" />
+                  Call {SITE.phone}
+                </li>
+                <li className="flex gap-2">
+                  <Clock3 className="mt-0.5 size-4 text-emerald-700" />
+                  Pick 30, 60, or 90 minutes
+                </li>
+                <li className="flex gap-2">
+                  <MapPin className="mt-0.5 size-4 text-emerald-700" />
+                  Visit {SITE.location}
+                </li>
+              </ol>
+            </Card>
+          </div>
         </div>
       </section>
 
