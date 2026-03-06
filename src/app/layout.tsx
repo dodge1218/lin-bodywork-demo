@@ -38,7 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang="en">
-      <body className="bg-white text-slate-900 antialiased">
+      <body className="antialiased">
         <Script id="org-json-ld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
         <SiteHeader />
         <main>{children}</main>
